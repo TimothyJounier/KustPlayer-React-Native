@@ -21,6 +21,7 @@
     "react-native-maps": "0.27.1",
     "react-native-mapview": "0.0.1",
     "react-native-paper": "^4.8.1",
+    "react-native-photo-view": "^1.5.2",
     "react-native-photo-zoom": "^1.1.4",
     "react-native-reanimated": "~2.1.0",
     "react-native-safe-area-context": "3.2.0",

@@ -2,6 +2,8 @@ import React from 'react';
 import { View, Text, Button, StyleSheet, Image } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import Tabs from '../navigation/Tabs';
+import Caroussel from '../components/Caroussel/Caroussel'
+import CarousselItem from '../components/Caroussel/CarousselItem'
 
 const HomeScreen = ({navigation}) => {
     return (
@@ -11,6 +13,7 @@ const HomeScreen = ({navigation}) => {
                 <Image
                     source={require('../assets/images/carousel1.png')}
                     resizeMode="cover"
+                    
                     style={{width: '100%', height:'90%', borderWidth:5, borderColor:'black'}}
                 />
             </View>  
@@ -18,11 +21,7 @@ const HomeScreen = ({navigation}) => {
                 <Text>WELCOME TO</Text>
                 <Text style={styles.title}> KUST PLAYER </Text>
                 {/* <Text style={styles.press}>La Press parle de nous!</Text> */}
-                <Image
-                    source={require('../assets/images/Press.png')}
-                    resizeMode="cover"
-                    style={styles.img}
-                />
+                <Caroussel />
             </View> 
         </View>
         </SafeAreaView>
@@ -40,8 +39,8 @@ const styles = StyleSheet.create({
       width: '100%',
     },
     container2:{
-        width:'100%',
-        height:'60%',
+        width:'80%',
+        height:'45%',
         alignItems:'center',
         shadowColor: 'black',
         shadowOffset: {
@@ -71,16 +70,5 @@ const styles = StyleSheet.create({
         shadowOpacity: 0.50,
         elevation: 5
     },
-    press: {
-        fontSize: 20,
-        marginBottom:10,
-        
-        
-    },
-    img: {
-        width: '60%',
-         height:'50%',
-         borderWidth:2, 
-         borderColor:'black',
-    }
+
   });
