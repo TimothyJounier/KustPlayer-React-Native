@@ -9,19 +9,19 @@ const HomeScreen = ({navigation}) => {
             <View style={styles.container}>
             <View style={styles.image}>
                 <Image
-                    source={require('../assets/images/SV.png')}
+                    source={require('../assets/images/carousel1.png')}
                     resizeMode="cover"
                     style={{width: '100%', height:'90%', borderWidth:5, borderColor:'black'}}
                 />
             </View>  
-            <View style={styles.container}>
+            <View style={styles.container2}>
                 <Text>WELCOME TO</Text>
                 <Text style={styles.title}> KUST PLAYER </Text>
-                <Text style={styles.press}>La Press parle de nous!</Text>
+                {/* <Text style={styles.press}>La Press parle de nous!</Text> */}
                 <Image
                     source={require('../assets/images/Press.png')}
                     resizeMode="cover"
-                    style={{width: '60%', height:'50%',borderWidth:2, borderColor:'black'}}
+                    style={styles.img}
                 />
             </View> 
         </View>
@@ -39,13 +39,28 @@ const styles = StyleSheet.create({
       alignItems: 'center',
       width: '100%',
     },
+    container2:{
+        width:'100%',
+        height:'60%',
+        alignItems:'center',
+        shadowColor: 'black',
+        shadowOffset: {
+            width: 0,
+            height: 10,
+        },
+        shadowOpacity: 0.35,
+        shadowRadius: 3.5,
+        elevation: 5,
+        marginTop: 10
+    },
     image: {
         width:'100%',
         height:'40%',
+        
     },
     title: {
         fontSize: 30,
-        marginBottom:30,
+        marginBottom:50,
         // borderWidth:2,
         // borderColor:'black',
         shadowColor: 'black',
@@ -62,4 +77,10 @@ const styles = StyleSheet.create({
         
         
     },
+    img: {
+        width: '60%',
+         height:'50%',
+         borderWidth:2, 
+         borderColor:'black',
+    }
   });
